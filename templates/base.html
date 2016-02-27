@@ -29,11 +29,8 @@
       background: -moz-linear-gradient(red, yellow);
       background: linear-gradient(red, yellow);
       height:5vh; overflow:hidden">
-        <a href="http://images.lmgtfy.com/?q=anonymouse" class="pure-menu-heading pure-menu-link">ANONYMOUSE {Top Cyber bank of 1991}</a>
+        <a href="http://images.lmgtfy.com/?q=anonymouse" class="pure-menu-heading pure-menu-link" style="color:black">ANONYMOUSE {Top Cyber bank of 1991}</a>
         <ul class="pure-menu-list" style="left: 50px">
-            <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Selected</a></li>
-            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Normal</a></li>
-            <li class="pure-menu-item pure-menu-disabled">Disabled</li>
         </ul>
     </div>
 
@@ -42,10 +39,9 @@
       background: -o-linear-gradient(red, yellow);
       background: -moz-linear-gradient(red, yellow);
       background: linear-gradient(red, yellow);
-     height:95vh; overflow:hidden">
-        <span class="pure-menu-heading">Sidebar</span>
+     height:95vh; overflow:hidden; width:8vw">
       <ul class="pure-menu-list">
-        <li class="pure-menu-item"><a href="#" class="pure-menu-link">items</a></li>
+        <li class="pure-menu-item"><a href="/registering/">Register</a></li>
         <li class="pure-menu-item"><a href="{% url 'auth_login' %}">Login</a></li>
       </ul>
     </div>
@@ -54,6 +50,13 @@
     top:20vh; height:60vh; left:20vw; width:60vw;">
     <p>HERE ARE SOME NOTIFICATIONS</p>
       {% block body_block %}{% endblock %}
+    </div>
+
+    <div class="ad-container" style="bottom:5px; left:30vw; width:60vw; align:center; position:absolute">
+      <img src="..\static\100perfectlegitad.jpg.jpg.jpg.wav.jpeg.jpg.jpg" style="height:16vh">
+      <img src="..\static\ad.jpg" style="height:16vh">
+      <img src="..\static\moreads.jpg" style="height:16vh">
+
     </div>
 
   </div>

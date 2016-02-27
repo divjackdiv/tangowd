@@ -13,6 +13,7 @@ def bienvenue(request):
 
 @login_required
 def account(request):
+<<<<<<< HEAD
     context_dooct = {}
 
     try:
@@ -43,3 +44,6 @@ def emessage(request):
     context_doooct['form'] = form
 
     return render(request, 'emessage.html', context_doooct)
+=======
+    return render(request, 'rango/account.html')
+>>>>>>> eb71a171e7603838f9a32f4513a662b7e0da5efc
