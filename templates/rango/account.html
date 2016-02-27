@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 
 {% block body_block %}
-	<div>hello
-	you have this much cash {{user.balance}}
+	<div>hello {{ user.first_name }} {{ user.last_name }}
+	you have this much cash ${{ account.balance }}
 	</div>
-<a href="logout">logout<a>
+<a href="{% url 'emessage' %}">Post a Message To Logged Out Users</a>
 {% endblock %}

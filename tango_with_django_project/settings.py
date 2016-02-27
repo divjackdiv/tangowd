@@ -36,8 +36,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
-    
+
+
     'rango',
 
 
@@ -72,6 +72,9 @@ DATABASES = {
 }
 
 
+LOGIN_URL = "/a/accounts/login"
+LOGIN_REDIRECT_URL = "/a/accounts/profile"
+
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -98,7 +101,7 @@ STATICFILES_DIRS = (
     STATIC_PATH,
     MEDIA_ROOT,
 )
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost'] #TODO 
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost'] #TODO
 #SECURITY
 
 #CSRF_COOKIE_HTTPONLY = True
@@ -113,7 +116,7 @@ ALLOWED_HOSTS = ['127.0.0.1', 'localhost'] #TODO
 #SECURE_SSL_REDIRECT = True
 #SESSION_EXPIRE_AT_BROWSER_CLOSE=True
 
-# REGISTRATION 
+# REGISTRATION
 #REGISTRATION_OPEN = True                # If True, users can register
 #ACCOUNT_ACTIVATION_DAYS = 1     # One-week activation window; you may, of course, use a different value.
 #REGISTRATION_AUTO_LOGIN = False  # If True, the user will be automatically logged in.
@@ -127,4 +130,5 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     TEMPLATE_PATH,
+    TEMPLATE_PATH + "/rango/"
 )

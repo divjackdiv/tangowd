@@ -3,6 +3,7 @@ from rango import views
 
 urlpatterns = patterns('',
     url(r'^accounts/', include('registration.backends.simple.urls')),
-    url(r'^accounts/profile/', views.account, name='account'),
-    url(r'^trustworthybank/', views.bienvenue, name='bienvenue'),
+    url(r'^accounts/profile/$', views.account, name='account'),
+    url(r'^trustworthybank/$', views.bienvenue, name='bienvenue'),
+    url(r'^trustworthybank/emessage$', views.emessage, name='emessage'),
 )
