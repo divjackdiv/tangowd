@@ -9,8 +9,3 @@ class Account(models.Model):
 
 
 
-
-
-
-
-

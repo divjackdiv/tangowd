@@ -3,6 +3,5 @@ from rango import views
 
 urlpatterns = patterns('',
     url(r'^accounts/', include('registration.backends.simple.urls')), 
-  
     url(r'^$', views.bienvenue, name='bienvenue'),
 )
