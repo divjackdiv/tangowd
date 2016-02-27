@@ -9,4 +9,4 @@ def bienvenue(request):
 @login_required
 def account(request):
 
-    return render(request, 'registration/account.html')
+    return render(request, 'rango/account.html')
