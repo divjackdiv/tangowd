@@ -3,7 +3,7 @@
 {% block body_block %}
 <!-- show message to not logged in users -->
 {% if not user.is_authenticated %}
-<div style="background-color: blue; min-height: 60px;">
+<div style="background-color: green; min-height: 60px;">
   <strong><u>Messages</u></strong><br>
   {% if emessage_list %}
   {% for emessage in emessage_list %}
