@@ -13,7 +13,6 @@ def bienvenue(request):
 
 @login_required
 def account(request):
-<<<<<<< HEAD
     context_dooct = {}
 
     try:
