@@ -29,13 +29,18 @@ TEMPLATE_DEBUG = False
 # Application definition
 
 INSTALLED_APPS = (
+    'django.contrib.sites',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    
     'rango',
+
+
 )
 
 MIDDLEWARE_CLASSES = (
@@ -46,16 +51,19 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+
+)
+PASSWORD_HASHERS = (
+	'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+	'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
 )
 
 ROOT_URLCONF = 'tango_with_django_project.urls'
 
 WSGI_APPLICATION = 'tango_with_django_project.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/1.7/ref/settings/#databases
-
+SITE_ID = 1
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -63,8 +71,6 @@ DATABASES = {
     }
 }
 
-# Internationalization
-# https://docs.djangoproject.com/en/1.7/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
@@ -87,10 +93,33 @@ STATIC_URL = '/static/' # You may find this is already defined as such.
 MEDIA_URL = '/static/images/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 
+
 STATICFILES_DIRS = (
     STATIC_PATH,
     MEDIA_ROOT,
 )
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost'] #TODO 
+#SECURITY
+
+#CSRF_COOKIE_HTTPONLY = True
+#CSRF_COOKIE_SECURE = True
+#SESSION_COOKIE_SECURE = True
+#X_FRAME_OPTIONS = 'DENY'
+
+#SECURE_HSTS_SECONDS = 3600
+#SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+#SECURE_CONTENT_TYPE_NOSNIFF = True
+#SECURE_BROWSER_XSS_FILTER =True
+#SECURE_SSL_REDIRECT = True
+#SESSION_EXPIRE_AT_BROWSER_CLOSE=True
+
+# REGISTRATION 
+#REGISTRATION_OPEN = True                # If True, users can register
+#ACCOUNT_ACTIVATION_DAYS = 1     # One-week activation window; you may, of course, use a different value.
+#REGISTRATION_AUTO_LOGIN = False  # If True, the user will be automatically logged in.
+#LOGIN_REDIRECT_URL = '/trustworthybank/'  # The page you want users to arrive at after they successful log in
+#LOGIN_URL = '/trustworthybank/login/'  # The page users are directed to if they are not logged in,
+
 
 TEMPLATE_PATH = os.path.join(BASE_DIR, 'templates')
 TEMPLATE_DIRS = (

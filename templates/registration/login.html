@@ -1,0 +1,9 @@
+
+{% if user.is_authenticated %}
+<h1>Your info</h1>
+<h4>hi {{ user.username }}</h4>
+<h4>your cash is  {{ user.moneyforbitches }}</h4>
+<a href=""><h2>logout<h2><a>
+{% else %}
+<h1>Rango says... hello world!</h1>
+{% endif %}
