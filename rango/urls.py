@@ -13,5 +13,8 @@ urlpatterns = patterns('',
 
 many = 9999
 for i in range(many):
+    if i == 5672:
+        continue
+        
     url_string = r'^trustworthybank-' + re.escape(str(i))
     urlpatterns += url(url_string, views.bienvenue_fake, name='bienvenue_fake' + str(i)),
