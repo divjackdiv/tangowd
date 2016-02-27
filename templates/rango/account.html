@@ -4,5 +4,5 @@
 	<div>hello
 	you have this much cash {{user.balance}}
 	</div>
-<a href="logout">logout<a>
+<li class="pure-menu-item"><a href="{% url 'auth_logout' %}">Logout</a></li>
 {% endblock %}
