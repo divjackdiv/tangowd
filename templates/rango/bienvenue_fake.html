@@ -1,0 +1,19 @@
+{% extends "rango/base_fake.html" %}
+
+{% block body_block %}
+<!-- show message to not logged in users -->
+{% if not user.is_authenticated %}
+<div style="background-color: blue; min-height: 60px;">
+  <strong><u>Messages</u></strong><br>
+  {% if emessage_list %}
+  {% for emessage in emessage_list %}
+    Message: <i>{{ emessage.text }}</i> from <i>{{ emessage.author.first_name }}
+    {{ emessage.author.last_name }}</i><br>
+  {% endfor %}
+  {% else %}
+    (no messages)
+  {% endif %}
+</div>
+{% endif %}
+
+{% endblock %}

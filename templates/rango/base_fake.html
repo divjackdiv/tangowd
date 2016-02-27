@@ -51,14 +51,14 @@
         <span class="pure-menu-heading"><strong>LOGGED OUT</strong></span>
      {% endif %}
       <ul class="pure-menu-list">
-        <li class="pure-menu-item"><a href="{% url 'bienvenue_fake' %}">Homepage</a></li>
+        <li class="pure-menu-item"><a href="#">Homepage</a></li>
 
         {% if user.is_authenticated %}
-          <li class="pure-menu-item"><a href="{% url 'account' %}">Account</a></li>
-          <li class="pure-menu-item"><a href="{% url 'auth_logout' %}">logout</a></li>
+          <li class="pure-menu-item"><a href="#">Account</a></li>
+          <li class="pure-menu-item"><a href="#">logout</a></li>
 
         {% else %}
-          <li class="pure-menu-item"><a href="{% url 'auth_login' %}">Login</a></li>
+          <li class="pure-menu-item"><a href="#">Login</a></li>
         {% endif %}
       </ul>
     </div>

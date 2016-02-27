@@ -4,6 +4,9 @@ from rango.models import *
 from rango.forms import *
 from django.contrib.auth.decorators import login_required
 
+def bienvenue_fake(request):
+    return render(request, 'bienvenue_fake.html', {})
+
 def bienvenue(request):
     emessage_list = EMessage.objects.all().order_by("-id")
 

@@ -72,8 +72,8 @@ DATABASES = {
 }
 
 
-LOGIN_URL = "/a/accounts/login"
-LOGIN_REDIRECT_URL = "/a/accounts/profile"
+LOGIN_URL = "/accounts/login"
+LOGIN_REDIRECT_URL = "/accounts/profile"
 
 LANGUAGE_CODE = 'en-us'
 

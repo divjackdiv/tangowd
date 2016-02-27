@@ -6,6 +6,6 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
     url(r'^account/', views.account, name='account'),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^trustworthybank/',include('rango.urls')),
+    url(r'',include('rango.urls')),
 
 )
