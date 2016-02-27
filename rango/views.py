@@ -7,6 +7,6 @@ def bienvenue(request):
     return render(request, 'base.html')
 
 @login_required
-def profile(request):
+def account(request):
 
-    return render(request, 'registration/login.html')
+    return render(request, 'registration/account.html')
