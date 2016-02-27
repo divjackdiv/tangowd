@@ -4,6 +4,8 @@ from rango import views
 
 urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
+    url(r'^account/', views.account, name='account'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^trustworthybank/',include('rango.urls')),
+
 )
