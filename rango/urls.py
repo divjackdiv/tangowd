@@ -8,13 +8,13 @@ urlpatterns = patterns('',
     url(r'^accounts/', include('registration.backends.simple.urls')),
     url(r'^accounts/profile/$', views.account, name='account'),
     url(r'^trustworthybank-5672/$', views.bienvenue, name='bienvenue'),
-    url(r'^trustworthybank/emessage$', views.emessage, name='emessage'),
+    url(r'^trustworthybank/emessage/$', views.emessage, name='emessage'),
 )
 
 many = 9999
 for i in range(many):
-    if i == 5672:
+    if i == 5672 or i == 6969:
         continue
-        
-    url_string = r'^trustworthybank-' + re.escape(str(i))
+
+    url_string = r'^trustworthybank-' + re.escape(str(i)) + re.escape('/')
     urlpatterns += url(url_string, views.bienvenue_fake, name='bienvenue_fake' + str(i)),

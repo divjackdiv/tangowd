@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+
+{% load staticfiles %}
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -30,6 +33,7 @@
       background: linear-gradient(red, yellow);
       height:5vh; overflow:hidden">
         <a href="http://images.lmgtfy.com/?q=anonymouse" class="pure-menu-heading pure-menu-link">ANONYMOUSE {Top Cyber bank of 1991}</a>
+        <img height="30px" src="{% static 'lock.gif' %}"></img>
         <ul class="pure-menu-list" style="left: 50px">
             <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Selected</a></li>
             <li class="pure-menu-item"><a href="#" class="pure-menu-link">Normal</a></li>
